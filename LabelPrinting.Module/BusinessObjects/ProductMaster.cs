@@ -169,7 +169,7 @@ namespace LabelPrinting.Module.BusinessObjects
                 ReportDataV2 rv2 = Session.FindObject<ReportDataV2>(new BinaryOperator("DisplayName", "70X30"));
                 lbl = ReportDataProvider.ReportsStorage.LoadReport(rv2);
                 lbl.DataSource = BPT;
-
+                //weewwewe sererwr
 
 
                 foreach (string Printer in GlobalVar.iList)
