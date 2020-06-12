@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems>
+    <Items>
+      <Item Id="Master" Caption="Master" ImageName="" ViewId="" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="ProductMaster" Caption="Product Master" ViewId="ProductMaster_ListView" ImageName="ProductQuickShippments" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="19.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="19.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

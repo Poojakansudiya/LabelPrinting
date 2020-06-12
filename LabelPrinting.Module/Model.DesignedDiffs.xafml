@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="LabelPrinting">
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Removed="True">
+        <Items>
+          <Item Id="LabelPrint_ListView" Removed="True" />
+          <Item Id="ProductMaster_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="19.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Validation>
+    <Rules>
+      <RuleRequiredField Id="ProductName" TargetType="LabelPrinting.Module.BusinessObjects.ProductMaster" TargetPropertyName="PartNo" TargetContextIDs="Save" IsNewNode="True" />
+    </Rules>
+  </Validation>
+  <Views>
+    <ListView Id="LabelPrint_ListView">
+      <Columns>
+        <ColumnInfo Id="UseQty" Width="59" Index="-1" />
+        <ColumnInfo Id="ProductName" Width="100" />
+        <ColumnInfo Id="Date" Width="59" />
+        <ColumnInfo Id="InvoiceNo" Width="71" />
+        <ColumnInfo Id="Qty" Width="38" />
+        <ColumnInfo Id="PartNo" Width="56" Index="4" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PrintParametersObject_DetailView" DefaultFocusedItem="InvoiceNo">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="PrintParametersObject" RelativeSize="100">
+              <LayoutGroup Id="PrintParametersObject_col1" RelativeSize="50">
+                <LayoutItem Id="Date" RelativeSize="5.17799352750809" />
+                <LayoutItem Id="Productname" ViewItem="Productname" Index="1" RelativeSize="3.883495145631068" IsNewNode="True" />
+                <LayoutItem Id="PartNo" Index="2" RelativeSize="90.938511326860848" />
+                <LayoutItem Id="InvoiceNo" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="PrintParametersObject_col2" RelativeSize="50">
+                <LayoutItem Id="InvoiceNo" ViewItem="InvoiceNo" Index="0" RelativeSize="5.17799352750809" IsNewNode="True" />
+                <LayoutItem Id="Qty" Index="1" RelativeSize="94.8220064724919" />
+                <LayoutItem Id="Productname" RelativeSize="5.17799352750809" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PrintParametersObjectSmallbarcode_DetailView" DefaultFocusedItem="Qty" />
+    <DetailView Id="ProductMaster_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ProductMaster" RelativeSize="100">
+              <LayoutItem Id="ProductName" RelativeSize="4.8558421851289832" />
+              <LayoutItem Id="PartNo" RelativeSize="3.6418816388467374" />
+              <LayoutItem Id="Packing" RelativeSize="91.502276176024282" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="86.949924127465863" Removed="True">
+            <LayoutGroup Id="LabelPrints" RelativeSize="100">
+              <LayoutItem Id="LabelPrints" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="parameterobject" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

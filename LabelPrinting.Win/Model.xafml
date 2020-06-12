@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo">
+  <NavigationItems NavigationStyle="Accordion" ShowImages="False" DefaultChildItemsDisplayStyle="List">
+    <Items>
+      <Item Id="LabelPrint" Caption="Print" ViewId="LabelPrint_ListView" ImageName="Print" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Labelprint" Caption="Label Print" ViewId="LabelPrint_ListView" ImageName="Print" IsNewNode="True" />
+          <Item Id="ProductMaster" ViewId="ProductMaster_ListView" ImageName="ProductQuickShippments" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Master" Removed="True">
+        <Items>
+          <Item Id="ProductMaster" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" ShowTabImage="False" LookupSmallCollectionItemCount="25000000">
+    <LayoutManagerOptions EnableLayoutGroupImages="False" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="19.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="19.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="LabelPrint_ListView" IsFooterVisible="True" IsGroupPanelVisible="True" />
+    <DetailView Id="PrintParametersObject_DetailView" Caption="Insert Data" />
+    <DetailView Id="PrintParametersObjectSmallbarcode_DetailView" Caption="Insert Data" />
+  </Views>
+</Application>
