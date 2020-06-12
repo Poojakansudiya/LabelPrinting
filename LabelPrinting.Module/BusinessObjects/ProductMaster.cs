@@ -170,8 +170,7 @@ namespace LabelPrinting.Module.BusinessObjects
                 lbl = ReportDataProvider.ReportsStorage.LoadReport(rv2);
                 lbl.DataSource = BPT;
 
-                //Add to git hub
-               // lbl.DataSource = BPT;
+              
 
                 foreach (string Printer in GlobalVar.iList)
                 {
