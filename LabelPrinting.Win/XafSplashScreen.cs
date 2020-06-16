@@ -35,7 +35,7 @@ namespace LabelPrinting.Win {
         public XafSplashScreen() {
             InitializeComponent();
 			LoadBlankLogo();
-            this.labelCopyright.Text = "Copyright © " + DateTime.Now.Year.ToString() + " Company Name" +  System.Environment.NewLine + "All rights reserved.";
+            this.labelCopyright.Text = "Copyright © " + DateTime.Now.Year.ToString() + " STAR PIPE" +  System.Environment.NewLine + "All rights reserved.";
             UpdateLabelsPosition();
         }
         

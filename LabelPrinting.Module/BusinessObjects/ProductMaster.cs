@@ -134,8 +134,8 @@ namespace LabelPrinting.Module.BusinessObjects
                 }
                 if (!PrintFlag)
                 {
-                        lbl.ShowPreview();                        
-                        PrintFlag = true;
+                    lbl.Print();
+                    PrintFlag = true;
                 }
 
                
@@ -189,7 +189,7 @@ namespace LabelPrinting.Module.BusinessObjects
                 }
                 if (!PrintFlag)
                 {
-                    lbl.ShowPreview();
+                    lbl.Print();
                     PrintFlag = true;
                 }
 

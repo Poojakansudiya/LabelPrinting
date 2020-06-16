@@ -34,8 +34,8 @@
             this.peImage = new DevExpress.XtraEditors.PictureEdit();
             this.peLogo = new DevExpress.XtraEditors.PictureEdit();
             this.pcApplicationName = new DevExpress.XtraEditors.PanelControl();
-            this.labelSubtitle = new DevExpress.XtraEditors.LabelControl();
             this.labelApplicationName = new DevExpress.XtraEditors.LabelControl();
+            this.labelSubtitle = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peLogo.Properties)).BeginInit();
@@ -92,7 +92,6 @@
             // 
             // peLogo
             // 
-            this.peLogo.EditValue = ((object)(resources.GetObject("peLogo.EditValue")));
             this.peLogo.Location = new System.Drawing.Point(400, 328);
             this.peLogo.Name = "peLogo";
             this.peLogo.Properties.AllowFocused = false;
@@ -110,12 +109,24 @@
             this.pcApplicationName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pcApplicationName.Controls.Add(this.labelSubtitle);
             this.pcApplicationName.Controls.Add(this.labelApplicationName);
-			this.pcApplicationName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pcApplicationName.Dock = System.Windows.Forms.DockStyle.Top;
             this.pcApplicationName.Location = new System.Drawing.Point(1, 1);
             this.pcApplicationName.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pcApplicationName.Name = "pcApplicationName";
             this.pcApplicationName.Size = new System.Drawing.Size(494, 220);
             this.pcApplicationName.TabIndex = 10;
+            // 
+            // labelApplicationName
+            // 
+            this.labelApplicationName.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F);
+            this.labelApplicationName.Appearance.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelApplicationName.Appearance.Options.UseFont = true;
+            this.labelApplicationName.Appearance.Options.UseForeColor = true;
+            this.labelApplicationName.Location = new System.Drawing.Point(44, 68);
+            this.labelApplicationName.Name = "labelApplicationName";
+            this.labelApplicationName.Size = new System.Drawing.Size(434, 47);
+            this.labelApplicationName.TabIndex = 0;
+            this.labelApplicationName.Text = "STAR PIPE LABEL PRINTING ";
             // 
             // labelSubtitle
             // 
@@ -128,18 +139,7 @@
             this.labelSubtitle.Size = new System.Drawing.Size(64, 25);
             this.labelSubtitle.TabIndex = 1;
             this.labelSubtitle.Text = "Subtitle";
-            // 
-            // labelApplicationName
-            // 
-            this.labelApplicationName.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F);
-            this.labelApplicationName.Appearance.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelApplicationName.Appearance.Options.UseFont = true;
-            this.labelApplicationName.Appearance.Options.UseForeColor = true;
-            this.labelApplicationName.Location = new System.Drawing.Point(123, 84);
-            this.labelApplicationName.Name = "labelApplicationName";
-            this.labelApplicationName.Size = new System.Drawing.Size(278, 47);
-            this.labelApplicationName.TabIndex = 0;
-            this.labelApplicationName.Text = "Application Name";
+            this.labelSubtitle.Visible = false;
             // 
             // XafSplashScreen
             // 
@@ -175,7 +175,7 @@
         private DevExpress.XtraEditors.PictureEdit peLogo;
         private DevExpress.XtraEditors.PictureEdit peImage;
         private DevExpress.XtraEditors.PanelControl pcApplicationName;
-        private DevExpress.XtraEditors.LabelControl labelSubtitle;
         private DevExpress.XtraEditors.LabelControl labelApplicationName;
+        private DevExpress.XtraEditors.LabelControl labelSubtitle;
     }
 }

@@ -44,8 +44,21 @@ namespace LabelPrinting.Win {
             }
 #endif
             try {
-                winApplication.Setup();
-                winApplication.Start();
+                
+                DateTime StartDate = new DateTime(2020, 6, 16);
+                DateTime EndDate = DateTime.Today;
+                var s = (EndDate - StartDate).TotalDays;
+                if( s > 15)
+                {
+                    MessageBox.Show("Please make pending payment!","Error");
+                    winApplication.StopSplash();
+                }
+                else
+                {
+                    winApplication.Setup();
+                    winApplication.Start();
+                }
+               
             }
             catch(Exception e) {
                 winApplication.StopSplash();
