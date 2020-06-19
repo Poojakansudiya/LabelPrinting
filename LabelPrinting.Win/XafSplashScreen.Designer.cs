@@ -34,8 +34,8 @@
             this.peImage = new DevExpress.XtraEditors.PictureEdit();
             this.peLogo = new DevExpress.XtraEditors.PictureEdit();
             this.pcApplicationName = new DevExpress.XtraEditors.PanelControl();
-            this.labelApplicationName = new DevExpress.XtraEditors.LabelControl();
             this.labelSubtitle = new DevExpress.XtraEditors.LabelControl();
+            this.labelApplicationName = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peLogo.Properties)).BeginInit();
@@ -116,18 +116,6 @@
             this.pcApplicationName.Size = new System.Drawing.Size(494, 220);
             this.pcApplicationName.TabIndex = 10;
             // 
-            // labelApplicationName
-            // 
-            this.labelApplicationName.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F);
-            this.labelApplicationName.Appearance.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelApplicationName.Appearance.Options.UseFont = true;
-            this.labelApplicationName.Appearance.Options.UseForeColor = true;
-            this.labelApplicationName.Location = new System.Drawing.Point(44, 68);
-            this.labelApplicationName.Name = "labelApplicationName";
-            this.labelApplicationName.Size = new System.Drawing.Size(434, 47);
-            this.labelApplicationName.TabIndex = 0;
-            this.labelApplicationName.Text = "STAR PIPE LABEL PRINTING ";
-            // 
             // labelSubtitle
             // 
             this.labelSubtitle.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,6 +128,18 @@
             this.labelSubtitle.TabIndex = 1;
             this.labelSubtitle.Text = "Subtitle";
             this.labelSubtitle.Visible = false;
+            // 
+            // labelApplicationName
+            // 
+            this.labelApplicationName.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F);
+            this.labelApplicationName.Appearance.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelApplicationName.Appearance.Options.UseFont = true;
+            this.labelApplicationName.Appearance.Options.UseForeColor = true;
+            this.labelApplicationName.Location = new System.Drawing.Point(44, 68);
+            this.labelApplicationName.Name = "labelApplicationName";
+            this.labelApplicationName.Size = new System.Drawing.Size(434, 47);
+            this.labelApplicationName.TabIndex = 0;
+            this.labelApplicationName.Text = "STAR PIPE LABEL PRINTING ";
             // 
             // XafSplashScreen
             // 

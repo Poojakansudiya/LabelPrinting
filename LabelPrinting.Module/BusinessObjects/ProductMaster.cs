@@ -98,6 +98,7 @@ namespace LabelPrinting.Module.BusinessObjects
                     PartNo = this,                     
                     Qty = parameters.Qty,
                 };
+
                 bool PrintFlag = false;
                 int doubleqty = parameters.Qty * 2;
                 XtraReport lbl = new XtraReport();
@@ -125,8 +126,8 @@ namespace LabelPrinting.Module.BusinessObjects
                         //{
                         //lbl.ShowPreview();
                         ReportPrintTool rpt = new ReportPrintTool(lbl);
-
-                        rpt.Print(Printer);
+                        rpt.ShowPreview();
+                        //rpt.Print(Printer);
                         PrintFlag = true;
                         // TODO: might not be correct. Was : Exit For
                         //}
@@ -134,7 +135,7 @@ namespace LabelPrinting.Module.BusinessObjects
                 }
                 if (!PrintFlag)
                 {
-                    lbl.Print();
+                    lbl.ShowPreview();
                     PrintFlag = true;
                 }
 
@@ -189,7 +190,7 @@ namespace LabelPrinting.Module.BusinessObjects
                 }
                 if (!PrintFlag)
                 {
-                    lbl.Print();
+                    lbl.ShowPreview();
                     PrintFlag = true;
                 }
 
