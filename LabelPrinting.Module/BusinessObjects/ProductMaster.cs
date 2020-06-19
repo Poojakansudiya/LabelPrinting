@@ -122,25 +122,19 @@ namespace LabelPrinting.Module.BusinessObjects
                 {
                     if (Printer.Contains(GlobalVar.LabelPrinterName))
                     {
-                        //for (int i = 1; i <= ; i++)
-                        //{
-                        //lbl.ShowPreview();
+                       
                         ReportPrintTool rpt = new ReportPrintTool(lbl);
                         rpt.ShowPreview();
                         //rpt.Print(Printer);
                         PrintFlag = true;
-                        // TODO: might not be correct. Was : Exit For
-                        //}
+                       
                     }
                 }
                 if (!PrintFlag)
                 {
                     lbl.ShowPreview();
                     PrintFlag = true;
-                }
-
-               
-                // Session.Save(parameters);
+                }               
             }
 
 
@@ -149,43 +143,31 @@ namespace LabelPrinting.Module.BusinessObjects
 
         [Action(Caption = "PRINT SMALL BARCODE", ImageName = "Action_Printing_Print", SelectionDependencyType = MethodActionSelectionDependencyType.RequireSingleObject)]
         public void PrintSMALL(PrintParametersObjectSmallbarcode parameters)
-        {
-
-            // int qty =  * 2;
+        {           
             if (parameters.Qty > 0)
-            {
-
-              
+            {              
                 bool PrintFlag = false;
                 int doubleqty = parameters.Qty * 2;
-                XtraReport lbl = new XtraReport();
-                // XPQuery<ProductMaster > BPT = Session.Query<ProductMaster>();
+                XtraReport lbl = new XtraReport();               
                 List<ProductMaster> BPT = new List<ProductMaster>();
                 for (int i = 1; i <= doubleqty; i++)
                 {
                     BPT.Add((ProductMaster)MemberwiseClone());
                 }
-                //var BPT = (from apt in pmst where apt.Oid == this.Oid select apt);
-                //   ProductMaster PM = Session.FindObject<ProductMaster>(new BinaryOperator("Oid", this.Oid));
+               
                 ReportDataV2 rv2 = Session.FindObject<ReportDataV2>(new BinaryOperator("DisplayName", "70X30"));
                 lbl = ReportDataProvider.ReportsStorage.LoadReport(rv2);
-                lbl.DataSource = BPT;
-
-              
+                lbl.DataSource = BPT;              
 
                 foreach (string Printer in GlobalVar.iList)
                 {
                     if (Printer.Contains(GlobalVar.DCPrinterName))
                     {
-                        //for (int i = 1; i <= ; i++)
-                        //{
-                        //lbl.ShowPreview();
+                       
                         ReportPrintTool rpt = new ReportPrintTool(lbl);
-
                         rpt.Print(Printer);
                         PrintFlag = true;
-                        // TODO: might not be correct. Was : Exit For
-                        //}
+                     
                     }
                 }
                 if (!PrintFlag)
@@ -194,7 +176,7 @@ namespace LabelPrinting.Module.BusinessObjects
                     PrintFlag = true;
                 }
 
-                // Session.Save(parameters);
+             
             }
 
 
