@@ -45,19 +45,19 @@ namespace LabelPrinting.Win {
 #endif
             try {
                 
-                DateTime StartDate = new DateTime(2020, 6, 16);
-                DateTime EndDate = DateTime.Today;
-                var s = (EndDate - StartDate).TotalDays;
-                if( s > 15)
-                {
-                    MessageBox.Show("Please make pending payment!","Error");
-                    winApplication.StopSplash();
-                }
-                else
-                {
+                //DateTime StartDate = new DateTime(2020, 7, 4);
+                //DateTime EndDate = DateTime.Today;
+                //var s = (EndDate - StartDate).TotalDays;
+                //if( s > 8)
+                //{
+                //    MessageBox.Show("Please make pending payment!","Error");
+                //    winApplication.StopSplash();
+                //}
+                //else
+                //{
                     winApplication.Setup();
                     winApplication.Start();
-                }
+               // }
                
             }
             catch(Exception e) {
